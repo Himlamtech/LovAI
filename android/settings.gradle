@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LovAI"
-include(":app")
+include ':app'

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <!-- Couple Avatar -->
+                <ImageView
+                    android:id="@+id/iv_couple_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circle_background"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_couple_heart"
+                    android:contentDescription="Couple Avatar" />
+
+                <!-- App Name and Subtitle -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LovAi"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnSurface" />
+
+                    <TextView
+                        android:id="@+id/tv_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Together Forever"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_medium" />
+
+                </LinearLayout>
+
+                <!-- Days Together Counter -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="625"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tv_days_together"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="days together"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Weather Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <!-- Weather Icon -->
+                <ImageView
+                    android:id="@+id/iv_weather_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_sunny"
+                    android:contentDescription="Weather Icon" />
+
+                <!-- Weather Info -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunny"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnSurface" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="75°F - Perfect date weather"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray_medium" />
+
+                </LinearLayout>
+
+                <!-- Weather Advice Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_weather_advice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perfect for outdoor dates! 😊"
+                    app:chipBackgroundColor="@color/colorSecondary"
+                    app:chipCornerRadius="16dp"
+                    android:textColor="@color/colorOnPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Calendar Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Calendar Header -->
+                <TextView
+                    android:id="@+id/tv_current_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="April 2023"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnSurface"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Calendar Grid (Simplified) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Days of Week Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="S" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="M" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="T" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="W" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="T" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="F" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="S" android:gravity="center" android:textColor="@color/gray_medium" android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <!-- Calendar Week 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="1" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="2" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="3" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:id="@+id/tv_date_4" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="4" android:gravity="center" android:textColor="@color/white" android:background="@drawable/calendar_date_highlighted" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="5" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="6" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="7" android:gravity="center" android:textColor="@color/colorOnSurface" />
+
+                    </LinearLayout>
+
+                    <!-- Calendar Week 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView android:id="@+id/tv_date_8" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="8" android:gravity="center" android:textColor="@color/white" android:background="@drawable/calendar_date_moment" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="9" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="10" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="11" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="12" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="13" android:gravity="center" android:textColor="@color/colorOnSurface" />
+                        <TextView android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="14" android:gravity="center" android:textColor="@color/colorOnSurface" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Selected Day Summary -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_sunny"
+                    android:contentDescription="Weather Icon" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sunny"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorOnSurface" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perfect for outdoor dates!"
+                    app:chipBackgroundColor="@color/colorSecondary"
+                    app:chipCornerRadius="16dp"
+                    android:textColor="@color/colorOnPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Weekend Suggestions -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_weekend_header"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Weekend looks great! 🌟"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnSurface" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_ai_suggested"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Suggested"
+                        app:chipBackgroundColor="@color/colorPrimary"
+                        app:chipCornerRadius="16dp"
+                        android:textColor="@color/colorOnPrimary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Based on your Saturday date history"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_medium"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Suggestion Items -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:background="@drawable/suggestion_item_background"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:text="🌅"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sunset Park"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorOnSurface" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+2"
+                            android:textSize="12sp"
+                            android:textColor="@color/gray_medium" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:contentDescription="Go to suggestion" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:background="@drawable/suggestion_item_background">
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:text="🍜"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Izakaya Sakura"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorOnSurface" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hot"
+                                android:textSize="12sp"
+                                android:textColor="@color/gray_medium"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5 $"
+                                android:textSize="12sp"
+                                android:textColor="@color/gray_medium" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:contentDescription="Go to suggestion" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
